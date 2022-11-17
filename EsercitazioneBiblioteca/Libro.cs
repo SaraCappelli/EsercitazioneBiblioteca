@@ -14,9 +14,13 @@ namespace EsercitazioneBiblioteca
         internal string Editore { get; private set; }
         internal int NumeroPagine { get; private set; }
 
-        public override string ToString()
+        internal string toString()
         {
             return $"{Titolo} di {Autore}, di pagine {NumeroPagine}; pubblicato nel {AnnoDiPubblicazione} da {Editore}.";
+        }
+        public override string ToString()
+        {
+            return Titolo;
         }
 
         internal string ReadingTime()

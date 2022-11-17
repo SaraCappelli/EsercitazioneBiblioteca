@@ -28,8 +28,8 @@
         <Button x:Name="aggiungiFiltro_button" Content="Filtra" HorizontalAlignment="Left" Margin="525,93,0,0" VerticalAlignment="Top" Height="26" Width="253" Click="aggiungiFiltro_button_Click"/>
         <Button x:Name="eliminaFiltri_button" Content="Elimina filtri" HorizontalAlignment="Left" Margin="525,124,0,0" VerticalAlignment="Top" Height="22" Width="253" Click="eliminaFiltri_button_Click"/>
         <TextBlock x:Name="libroSelezionato_header" HorizontalAlignment="Left" Margin="525,190,0,0" TextWrapping="Wrap" Text="Libro selezionato" VerticalAlignment="Top" Height="19" Width="265" TextAlignment="Center" FontSize="14"/>
-        <TextBlock x:Name="libroSelInfo_txtBlock" HorizontalAlignment="Left" Margin="525,214,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="253"/>
-        <TextBlock x:Name="tempoLettura_txtBlock" HorizontalAlignment="Left" Margin="525,235,0,0" TextWrapping="Wrap" Text="Tempo di lettura:" VerticalAlignment="Top" Width="253"/>
+        <TextBlock x:Name="libroSelInfo_txtBlock" HorizontalAlignment="Left" Margin="525,214,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="253" Height="49"/>
+        <TextBlock x:Name="tempoLettura_txtBlock" HorizontalAlignment="Left" Margin="525,268,0,0" TextWrapping="Wrap" Text="Tempo di lettura:" VerticalAlignment="Top" Width="253"/>
 
     </Grid>
 </Window>

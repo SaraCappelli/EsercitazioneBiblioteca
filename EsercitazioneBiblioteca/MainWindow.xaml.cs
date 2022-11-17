@@ -23,6 +23,7 @@ namespace EsercitazioneBiblioteca
         public MainWindow()
         {
             InitializeComponent();
+            InizializzaFiltri();
         }
 
         private void aggiungiLibro_button_Click(object sender, RoutedEventArgs e)
@@ -32,8 +33,9 @@ namespace EsercitazioneBiblioteca
                 if (ControllaCampiAggiuntaLibro())
                 {
                     Biblioteca.AggiungiLibro(new Libro(titolo_input.Text, autore_input.Text, int.Parse(annoPbl_input.Text), editore_input.Text, int.Parse(numeroPagine_input.Text)));
+                    ReimpostaCampiAggiuntaLibro();
+                    AggiornaListaLibri(Biblioteca.ListaLibri);
                 }
-                ReimpostaCampiAggiuntaLibro();
             }
             catch { }
             
@@ -67,7 +69,7 @@ namespace EsercitazioneBiblioteca
                 num = 0;
             }
             filtroAttuale = (TipoDiFiltro)num;
-            tipoFiltro_button.Content = filtroAttuale;
+            AggiornaPulsanteFiltri();
         }
 
         enum TipoDiFiltro
@@ -88,7 +90,16 @@ namespace EsercitazioneBiblioteca
             }
         }
 
+        void InizializzaFiltri()
+        {
+            filtroAttuale = 0;
+            AggiornaPulsanteFiltri();
+        }
 
+        void AggiornaPulsanteFiltri()
+        {
+            tipoFiltro_button.Content = filtroAttuale;
+        }
         #endregion
 
         void AggiornaListaLibri(List<Libro> lista)
@@ -107,8 +118,11 @@ namespace EsercitazioneBiblioteca
 
         private void listaLibri_listBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            libroSelInfo_txtBlock.Text = listaLibri_listBox.SelectedItem.toString();
-            tempoLettura_txtBlock.Text = listaLibri_listBox.SelectedItem.ReadingTime();
+            if (listaLibri_listBox.SelectedItem != null)
+            {
+                libroSelInfo_txtBlock.Text = ((Libro)listaLibri_listBox.SelectedItem).toString();
+                tempoLettura_txtBlock.Text = "Tempo di lettura: " + ((Libro)listaLibri_listBox.SelectedItem).ReadingTime();
+            }
         }
     }
 }
