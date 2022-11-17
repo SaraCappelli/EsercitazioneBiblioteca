@@ -39,6 +39,7 @@ namespace EsercitazioneBiblioteca
             
         }
 
+        // ritorna true se i campi sono pieni. Puo' generare eccezioni nel caso in cui il parse fallisca
         bool ControllaCampiAggiuntaLibro()
         {
             return (titolo_input.Text != "" && autore_input.Text != "" && int.Parse(annoPbl_input.Text) > 0 && editore_input.Text != "" && int.Parse(numeroPagine_input.Text) > 0);
