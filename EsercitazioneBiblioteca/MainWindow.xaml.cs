@@ -27,16 +27,21 @@ namespace EsercitazioneBiblioteca
 
         private void aggiungiLibro_button_Click(object sender, RoutedEventArgs e)
         {
-            if (ControllaCampiAggiuntaLibro())
+            try
             {
-                Biblioteca.AggiungiLibro(new Libro(titolo_input.Text, autore_input.Text, int.Parse(annoPbl_input.Text), editore_input.Text, int.Parse(numeroPagine_input.Text)));
+                if (ControllaCampiAggiuntaLibro())
+                {
+                    Biblioteca.AggiungiLibro(new Libro(titolo_input.Text, autore_input.Text, int.Parse(annoPbl_input.Text), editore_input.Text, int.Parse(numeroPagine_input.Text)));
+                }
+                ReimpostaCampiAggiuntaLibro();
             }
-            ReimpostaCampiAggiuntaLibro();
+            catch { }
+            
         }
 
         bool ControllaCampiAggiuntaLibro()
         {
-            // TODO
+            return (titolo_input.Text != "" && autore_input.Text != "" && int.Parse(annoPbl_input.Text) > 0 && editore_input.Text != "" && int.Parse(numeroPagine_input.Text) > 0);
         }
 
         void ReimpostaCampiAggiuntaLibro()
