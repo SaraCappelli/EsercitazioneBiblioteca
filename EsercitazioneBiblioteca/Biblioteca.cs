@@ -41,13 +41,12 @@ namespace EsercitazioneBiblioteca
             ListaLibri.Add(libro);
         }
 
-        /// <returns>Un libro se e' stato trovato, altrimenti null.</returns>
-        internal static Libro TrovaConTitolo(string titolo)
+        internal static List<Libro> FiltraPerTitolo(string titolo)
         {
-            return ListaLibri.Find(l => l.Titolo == titolo);
+            return ListaLibri.FindAll(l => l.Titolo == titolo);
         }
 
-        internal static List<Libro> TrovaPerAutore(string autore)
+        internal static List<Libro> FiltraPerAutore(string autore)
         {
             return ListaLibri.FindAll(l => l.Autore == autore);
         }

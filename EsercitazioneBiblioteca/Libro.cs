@@ -30,5 +30,14 @@ namespace EsercitazioneBiblioteca
                     return "2h";
             }
         }
+
+        internal Libro(string titolo, string autore, int annoDiPubblicazione, string editore, int numeroPagine)
+        {
+            Titolo = titolo;
+            Autore = autore;
+            AnnoDiPubblicazione = annoDiPubblicazione;
+            Editore = editore;
+            NumeroPagine = numeroPagine;
+        }
     }
 }
