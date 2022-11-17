@@ -11,6 +11,7 @@ namespace EsercitazioneBiblioteca
         internal static string Nome { get; private set; }
         internal static string Indirizzo { get; private set; }
         // TODO: orari di apertura e chiusura giornaliera
+        internal static List<FasciaOrario> FasceOrarioApertura { get; private set; }
 
         internal static List<Libro> ListaLibri { get; } = new();
 
@@ -23,9 +24,19 @@ namespace EsercitazioneBiblioteca
         {
             Indirizzo = indirizzo;
         }
+        internal static void ImpostaFasceOrario(params int[] orariInizioFine)
+        {
+            List<FasciaOrario> fasce = new();
+            for (int i = 0; i < orariInizioFine.Length; i++)
+            {
+                FasciaOrario current = new();
+                if (i % 0 == 0) current.Inizio = orariInizioFine[i];
+                else current.Fine = orariInizioFine[i]; fasce.Add(current);
+            }
+        }
 
         
-        internal void AggiungiLibro(Libro libro)
+        internal static void AggiungiLibro(Libro libro)
         {
             ListaLibri.Add(libro);
         }
@@ -44,5 +55,11 @@ namespace EsercitazioneBiblioteca
         {
             return ListaLibri.Count;
         }
+    }
+
+    internal class FasciaOrario
+    {
+        internal int Inizio;
+        internal int Fine;
     }
 }
