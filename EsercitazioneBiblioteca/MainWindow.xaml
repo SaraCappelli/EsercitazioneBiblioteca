@@ -21,7 +21,7 @@
         <Rectangle HorizontalAlignment="Left" Height="396" Margin="249,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="541"/>
         <TextBlock x:Name="biblioteca_header" HorizontalAlignment="Left" Margin="249,10,0,0" TextWrapping="Wrap" Text="Biblioteca" VerticalAlignment="Top" Height="25" Width="541" TextAlignment="Center" LineHeight="18" FontSize="16"/>
         <TextBlock x:Name="listaLibri_header" HorizontalAlignment="Left" Margin="249,40,0,0" TextWrapping="Wrap" Text="Lista libri" VerticalAlignment="Top" Height="19" Width="271" TextAlignment="Center" FontSize="14"/>
-        <ListBox x:Name="listaLibri_listBox" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="249,64,280,28" SelectionChanged="listaLibri_listBox_SelectionChanged"/>
+        <ListBox x:Name="listaLibri_listBox" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="249,64,280,50" SelectionChanged="listaLibri_listBox_SelectionChanged"/>
         <Button x:Name="tipoFiltro_button" Content="TipoFiltro" HorizontalAlignment="Left" Margin="664,64,0,0" VerticalAlignment="Top" Height="24" Width="114" Click="tipoFiltro_button_Click"/>
         <TextBlock x:Name="filtri_header" HorizontalAlignment="Left" Margin="520,40,0,0" TextWrapping="Wrap" Text="Filtri" VerticalAlignment="Top" Height="19" Width="271" TextAlignment="Center" FontSize="14"/>
         <TextBox x:Name="filtro_input" HorizontalAlignment="Left" Margin="525,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="134" Height="24" TextAlignment="Center" FontSize="14"/>
@@ -30,6 +30,7 @@
         <TextBlock x:Name="libroSelezionato_header" HorizontalAlignment="Left" Margin="525,190,0,0" TextWrapping="Wrap" Text="Libro selezionato" VerticalAlignment="Top" Height="19" Width="265" TextAlignment="Center" FontSize="14"/>
         <TextBlock x:Name="libroSelInfo_txtBlock" HorizontalAlignment="Left" Margin="525,214,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="253" Height="49"/>
         <TextBlock x:Name="tempoLettura_txtBlock" HorizontalAlignment="Left" Margin="525,268,0,0" TextWrapping="Wrap" Text="Tempo di lettura:" VerticalAlignment="Top" Width="253"/>
+        <TextBlock x:Name="numeroLibri_txtBlock" HorizontalAlignment="Left" Margin="249,384,0,0" TextWrapping="Wrap" Text="NumeroLibri:" VerticalAlignment="Top" Width="271"/>
 
     </Grid>
 </Window>

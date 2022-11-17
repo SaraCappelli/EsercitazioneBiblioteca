@@ -109,6 +109,7 @@ namespace EsercitazioneBiblioteca
             {
                 listaLibri_listBox.Items.Add(l);
             }
+            numeroLibri_txtBlock.Text = "Numero libri: " + lista.Count;
         }
 
         private void eliminaFiltri_button_Click(object sender, RoutedEventArgs e)
